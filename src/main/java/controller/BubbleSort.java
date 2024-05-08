@@ -16,6 +16,7 @@ public class BubbleSort
     private Button bt_start;
     @javafx.fxml.FXML
     private TextField txf_iterations;
+    private int arregloDesordenado[] = new int[200];
 
     @javafx.fxml.FXML
     public void initialize() {
