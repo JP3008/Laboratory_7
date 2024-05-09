@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="985.0" style="-fx-background-color: #f5f9ff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CountingSort">
+   <center>
+      <AnchorPane prefHeight="678.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="5.0" layoutY="40.0" prefHeight="104.0" prefWidth="986.0" style="-fx-background-color: #9196c0;">
+               <children>
+                  <Label layoutX="292.0" layoutY="44.0" text="Counting Sorting Algorithm">
+                     <font>
+                        <Font name="Century Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="4.0" layoutY="151.0" prefHeight="214.0" prefWidth="986.0" style="-fx-background-color: #aaafd0;">
+               <children>
+                  <Label layoutX="117.0" layoutY="14.0" text="No sorted array">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewNoSorted" layoutX="43.0" layoutY="53.0" prefHeight="127.0" prefWidth="871.0" />
+               </children></Pane>
+            <Pane layoutX="4.0" layoutY="372.0" prefHeight="546.0" prefWidth="986.0" style="-fx-background-color: #c3c8e0;">
+               <children>
+                  <Label layoutX="108.0" layoutY="13.0" text="Counter sorted">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewCounterSorted" layoutX="44.0" layoutY="63.0" prefHeight="119.0" prefWidth="871.0" />
+                  <Label layoutX="108.0" layoutY="203.0" text="Counting sorted array">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="bt_start" layoutX="312.0" layoutY="395.0" mnemonicParsing="false" text="Start">
+                     <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_randomize" layoutX="506.0" layoutY="395.0" mnemonicParsing="false" text="Randomize">
+                     <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tableViewCountingSortedArray1" layoutX="47.0" layoutY="250.0" prefHeight="126.0" prefWidth="871.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
