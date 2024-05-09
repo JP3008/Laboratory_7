@@ -18,14 +18,14 @@ public class Utility {
     public static String show(int[] a, int size) {
         String result="";
         for (int i = 0; i < size; i++) {
-            result+= STR."\{a[i]} ";
+            result+= a[i] + " ";
         }
         return result;
     }
 
-    public static void fill(int[] a, int bound) {
+    public static void fill(int[] a) {
         for (int i = 0; i < a.length; i++) {
-            a[i] = new Random().nextInt(bound);
+            a[i] = new Random().nextInt(0,99);
         }
     }
 
