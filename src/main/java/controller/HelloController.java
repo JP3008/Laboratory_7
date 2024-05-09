@@ -48,27 +48,27 @@ public class HelloController {
 
     @FXML
     void countingSortOnAction(ActionEvent event) {
-        loadPage("countingSort.fxml");
+        loadPage("CountingSort.fxml");
     }
 
     @FXML
     void improvedBubbleSortOnAction(ActionEvent event) {
-        loadPage("improvedBubbleSort.fxml");
+        loadPage("ImprovedBubbleSort.fxml");
     }
 
     @FXML
     void mergeSortOnAction(ActionEvent event) {
-        loadPage("mergeSort.fxml");
+        loadPage("MergeSort.fxml");
     }
 
     @FXML
     void quixkSortOnAction(ActionEvent event) {
-        loadPage("quickSort.fxml");
+        loadPage("QuickSort.fxml");
     }
 
     @FXML
     void radixSortOnAction(ActionEvent event) {
-        loadPage("radixSort.fxml");
+        loadPage("RadixSort.fxml");
     }
 
     @FXML
@@ -78,7 +78,7 @@ public class HelloController {
 
     @FXML
     void shellSortOnAction(ActionEvent event) {
-        loadPage("shellSort.fxml");
+        loadPage("ShellSort.fxml");
     }
 
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="985.0" style="-fx-background-color: #f5f9ff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MergeSort">
+   <center>
+      <AnchorPane prefHeight="678.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="5.0" layoutY="40.0" prefHeight="104.0" prefWidth="986.0" style="-fx-background-color: #9196c0;">
+               <children>
+                  <Label layoutX="292.0" layoutY="44.0" text="Radix Sorting Algorithm">
+                     <font>
+                        <Font name="Century Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="4.0" layoutY="151.0" prefHeight="165.0" prefWidth="986.0" style="-fx-background-color: #aaafd0;">
+               <children>
+                  <Label layoutX="117.0" text="No sorted array">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewNoSorted" layoutX="43.0" layoutY="39.0" prefHeight="110.0" prefWidth="871.0" />
+               </children></Pane>
+            <Pane layoutX="4.0" layoutY="325.0" prefHeight="593.0" prefWidth="986.0" style="-fx-background-color: #c3c8e0;">
+               <children>
+                  <Label layoutX="108.0" layoutY="4.0" text="Temp array">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewTempArray" layoutX="44.0" layoutY="45.0" prefHeight="107.0" prefWidth="871.0" />
+                  <Label layoutX="108.0" layoutY="157.0" text="Merge sorted array">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="bt_start" layoutX="312.0" layoutY="460.0" mnemonicParsing="false" text="Start">
+                     <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_randomize" layoutX="506.0" layoutY="458.0" mnemonicParsing="false" text="Randomize">
+                     <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tableViewMergeSortedArray" layoutX="47.0" layoutY="330.0" prefHeight="109.0" prefWidth="871.0" />
+                  <Label layoutX="135.0" layoutY="197.0" text="Low:">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="135.0" layoutY="239.0" text="High:">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="135.0" layoutY="274.0" text="Recursive calls:">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txf_RecursiveCalls" layoutX="363.0" layoutY="280.0" prefHeight="37.0" prefWidth="163.0" />
+                  <TextField fx:id="txf_Low" layoutX="208.0" layoutY="198.0" prefHeight="37.0" prefWidth="710.0" />
+                  <TextField fx:id="txf_high" layoutX="208.0" layoutY="239.0" prefHeight="37.0" prefWidth="709.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
