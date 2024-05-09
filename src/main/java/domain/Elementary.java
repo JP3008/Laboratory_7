@@ -10,6 +10,10 @@ package domain;
  * @author Profesor Lic. Gilberth Chaves A.
  */
 public class Elementary {
+    private int iteracionesTotales;
+    public int getTotalIteraciones(){
+        return iteracionesTotales;
+    }
     public void bubbleSort(int a[]){
         for(int i=1;i<a.length;i++)
             for(int j=0;j<a.length-i;j++){
