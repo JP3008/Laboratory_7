@@ -18,6 +18,14 @@ public class Elementary {
     public int getTotalIteraciones(){
         return iteracionesTotales;
     }
+    private String acumulaMinimo;
+    private String acumulaIndiceMinimo;
+    public String getMinimo() {
+        return acumulaMinimo;
+    }
+    public String getIndiceMinimo() {
+        return acumulaIndiceMinimo;
+    }
     public void bubbleSort(int a[]){
         this.iteracionesTotales = 0;
         for(int i=1;i<a.length;i++)
@@ -47,22 +55,39 @@ public class Elementary {
             }//for j
 	    }//for i
     }
-    
-    public void selectionSort(int a[]){
-        for(int i=0;i<a.length-1;i++){
-            int min=a[i];
-            int minIndex=i;
-            for(int j=i+1;j<a.length;j++){
-                if(a[j]<min){
-                    min=a[j];
-                    minIndex=j;
-                }//if
-            }//for j
-            a[minIndex]=a[i];
-            a[i]=min;
-        }//for i
+
+    public void selectionSort(int a[]) {
+        if (acumulaIndiceMinimo == null) {
+            acumulaIndiceMinimo = "";
+        }
+        if (acumulaMinimo == null) {
+            acumulaMinimo = "";
+        }
+
+        for (int i = 0; i < a.length - 1; i++) {
+            int min = a[i];
+            int minIndex = i;
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[j] < min) {
+                    min = a[j];
+                    minIndex = j;
+                    iteracionesTotales++;
+                }
+            }
+            a[minIndex] = a[i];
+            a[i] = min;
+
+            if (acumulaIndiceMinimo != null) {
+                acumulaIndiceMinimo += minIndex + " ";
+            }
+            if (acumulaMinimo != null) {
+                acumulaMinimo += min + " ";
+            }
+
+        }
     }
-    
+
+
     public void countingSort(int a[]) {
         int max = util.Utility.maxArray(a); //va de 0 hasta el elemento maximo
         // create buckets

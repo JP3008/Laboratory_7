@@ -32,6 +32,26 @@ public class Complex {
     public void setRecursiveCalling(){
         this.recursiveCalling = 0;
     }
+    private String acumulaGap="";
+    private String acumulaGapSub1="";
+    private String acumulaGapSub2="";
+    private String acumulaGapSub3="";
+
+    public String getAcumulaGap() {
+        return acumulaGap;
+    }
+
+    public String getAcumulaGapSub1() {
+        return acumulaGapSub1;
+    }
+
+    public String getAcumulaGapSub2() {
+        return acumulaGapSub2;
+    }
+
+    public String getAcumulaGapSub3() {
+        return acumulaGapSub3;
+    }
     public void quickSort(int arr[], int low, int high){
         int i=low;
         this.listLow = i + " ";
@@ -138,32 +158,43 @@ public class Complex {
             a[endIndex] = tmp[endIndex]; 
     }
 
-    public void shellSort(int a[]) { 
-        int n = a.length; 
-        // Start with a big gap, then reduce the gap 
-        for (int gap = n/2; gap > 0; gap /= 2){
-                // Do a gapped insertion sort for this gap size.
-            // The first gap elements a[0..gap-1] are already 
-            // in gapped order keep adding one more element 
-            // until the entire array is gap sorted
-            int x=1;
-            for (int i = gap; i < n; i += 1){
-                // add a[i] to the elements that have been gap
-                // sorted save a[i] in temp and make a hole at 
-                // position i 
+    public  void shellSort(int a[]) {
+        // Inicializamos las variables de acumulación de intervalos
+        acumulaGap = "";
+        acumulaGapSub1 = "";
+        acumulaGapSub2 = "";
+        acumulaGapSub3 = "";
+
+        int n = a.length;
+        // Comenzamos con un intervalo grande y luego lo reducimos
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            // Acumulamos el valor de gap en la cadena
+            acumulaGap += gap + " ";
+
+            // Ordenación usando insertion sort con el intervalo actual
+            for (int i = gap; i < n; i += 1) {
                 int temp = a[i];
-
-                // shift earlier gap-sorted elements up until 
-                // the correct location for a[i] is found 
                 int j;
-                for (j = i; j >= gap && a[j - gap] > temp; j -= gap) 
-                    a[j] = a[j - gap]; 
-  
-                // put temp (the original a[i]) in its correct 
-                // location 
-                a[j] = temp; 
-            } 
-        } 
-    }
 
+                // Movemos los elementos a[j - gap] a su posición correcta para a[i]
+                for (j = i; j >= gap && a[j - gap] > temp; j -= gap) {
+                    a[j] = a[j - gap];
+                }
+
+                // Insertamos temp (el valor original de a[i]) en su posición correcta
+                a[j] = temp;
+            }
+
+            // Acumulamos los tres primeros subarreglos generados en las variables correspondientes
+            for (int k = 0; k < n; k++) {
+                if (k == 0) {
+                    acumulaGapSub1 += a[gap] + " ";
+                } else if (k == 1) {
+                    acumulaGapSub2 += a[gap] + " ";
+                } else if (k == 2) {
+                    acumulaGapSub3 += a[gap] + " ";
+                }
+            }
+        }
+    }
 }

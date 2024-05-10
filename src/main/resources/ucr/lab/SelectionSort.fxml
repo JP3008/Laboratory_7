@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="985.0" style="-fx-background-color: #f5f9ff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectionSort">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="985.0" style="-fx-background-color: #f5f9ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectionSort">
    <center>
       <AnchorPane prefHeight="678.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,12 +29,7 @@
                         <Font name="Century Gothic" size="30.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tableViewNoSorted" layoutX="44.0" layoutY="66.0" prefHeight="122.0" prefWidth="871.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
+                  <TableView fx:id="tableViewNoSorted" layoutX="44.0" layoutY="66.0" prefHeight="122.0" prefWidth="871.0" />
                </children></Pane>
             <Pane layoutX="4.0" layoutY="384.0" prefHeight="534.0" prefWidth="986.0" style="-fx-background-color: #c8dbf1;">
                <children>
@@ -38,24 +38,19 @@
                         <Font name="Century Gothic" size="30.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tableViewSorted" layoutX="45.0" layoutY="218.0" prefHeight="141.0" prefWidth="871.0">
-                     <columns>
-                        <TableColumn prefWidth="75.0" text="C1" />
-                        <TableColumn prefWidth="75.0" text="C2" />
-                     </columns>
-                  </TableView>
+                  <TableView fx:id="tableViewSorted" layoutX="45.0" layoutY="218.0" prefHeight="141.0" prefWidth="871.0" />
                   <Label layoutX="158.0" layoutY="67.0" text="min:">
                      <font>
                         <Font name="Century Gothic" size="30.0" />
                      </font>
                   </Label>
                   <TextField fx:id="txf_min" layoutX="226.0" layoutY="63.0" prefHeight="44.0" prefWidth="101.0" />
-                  <Button fx:id="bt_start" layoutX="307.0" layoutY="392.0" mnemonicParsing="false" text="Start">
+                  <Button fx:id="bt_start" layoutX="307.0" layoutY="392.0" mnemonicParsing="false" onAction="#startOnAction" text="Start">
                      <font>
                         <Font name="Century Gothic Bold" size="30.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bt_randomize" layoutX="505.0" layoutY="391.0" mnemonicParsing="false" text="Randomize">
+                  <Button fx:id="bt_randomize" layoutX="505.0" layoutY="391.0" mnemonicParsing="false" onAction="#randomizeOnAction" text="Randomize">
                      <font>
                         <Font name="Century Gothic Bold" size="30.0" />
                      </font>
