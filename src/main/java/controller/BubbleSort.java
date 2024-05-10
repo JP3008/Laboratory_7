@@ -24,8 +24,6 @@ public class BubbleSort
     @javafx.fxml.FXML
     private TextField txf_iterations;
     private int arrayNumbers[];
-    TableColumn tableColumnsNoSort[] = new TableColumn[200];
-    TableColumn tableColumnsSort[] = new TableColumn[200];
     private Alert alert;
     Elementary elementary = new Elementary();
     @javafx.fxml.FXML
