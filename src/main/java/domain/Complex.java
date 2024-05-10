@@ -13,10 +13,29 @@ import java.util.Random;
  */
 public class Complex {
     private int counterRadix[];
+    private String listPivot = "";
+    private String listLow = "";
+    private String listHigh = "";
+    private int recursiveCalling = 0;
+    public String getListPivot(){
+        return this.listPivot;
+    }
+    public String getListlow(){
+        return this.listLow;
+    }
+    public String getListHigh(){
+        return this.listHigh;
+    }
+    public int getRecursiveCalling(){
+        return this.recursiveCalling;
+    }
     public void quickSort(int arr[], int low, int high){
         int i=low;
+        this.listLow = i + " ";
         int j=high;
+        this.listHigh = j + " ";
         int pivot=arr[(low+high)/2];
+        this.listPivot = pivot + " ";
         do{
             while(arr[i]<pivot) i++;
             while(arr[j]>pivot) j--;
@@ -28,8 +47,14 @@ public class Complex {
                 }//if
         }while(i<=j);//do
 
-        if(low<j) quickSort(arr,low,j);
-        if(i<high) quickSort(arr,i,high);
+        if(low<j) {
+            this.recursiveCalling++;
+            quickSort(arr, low, j);
+        }
+        if(i<high) {
+            this.recursiveCalling++;
+            quickSort(arr, i, high);
+        }
     }
 
     public void radixSort(int a[], int n){ 
