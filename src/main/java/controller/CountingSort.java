@@ -30,7 +30,7 @@ public class    CountingSort
     @javafx.fxml.FXML
     public void initialize() {
         arrayNumbers = new int[200];
-        util.Utility.fill(arrayNumbers,200);
+        util.Utility.fill(arrayNumbers);
     }
     //Este boton debe ordenar mostrar el arreglo ademas, de mostrar los valores no acomodados
     @javafx.fxml.FXML
