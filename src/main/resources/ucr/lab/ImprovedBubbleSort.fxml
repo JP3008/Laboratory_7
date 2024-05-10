@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="985.0" style="-fx-background-color: #f5f9ff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ImprovedBubbleSort">
+   <center>
+      <AnchorPane prefHeight="678.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="5.0" layoutY="40.0" prefHeight="104.0" prefWidth="986.0" style="-fx-background-color: #9196c0;">
+               <children>
+                  <Label layoutX="292.0" layoutY="44.0" text="Bubble Sorting Algorithm">
+                     <font>
+                        <Font name="Century Gothic Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="4.0" layoutY="151.0" prefHeight="260.0" prefWidth="986.0" style="-fx-background-color: #aaafd0;">
+               <children>
+                  <Label layoutX="117.0" layoutY="23.0" text="No sorted array">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewNoSorted" layoutX="44.0" layoutY="66.0" prefHeight="141.0" prefWidth="871.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+            <Pane layoutX="4.0" layoutY="419.0" prefHeight="499.0" prefWidth="986.0" style="-fx-background-color: #c3c8e0;">
+               <children>
+                  <Label layoutX="108.0" layoutY="23.0" text="Bubble sorted array">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewSorted" layoutX="44.0" layoutY="140.0" prefHeight="141.0" prefWidth="871.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="108.0" layoutY="67.0" text="Total iterations performed:">
+                     <font>
+                        <Font name="Century Gothic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txf_iterations" layoutX="505.0" layoutY="64.0" prefHeight="44.0" prefWidth="101.0" />
+                  <Button fx:id="bt_start" layoutX="307.0" layoutY="328.0" mnemonicParsing="false" text="Start">
+                     <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_randomize" layoutX="505.0" layoutY="328.0" mnemonicParsing="false" text="Randomize">
+                     <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
