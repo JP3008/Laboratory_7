@@ -10,7 +10,7 @@ import javafx.scene.control.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CountingSort
+public class    CountingSort
 {
     @javafx.fxml.FXML
     private Button bt_randomize;
@@ -30,7 +30,7 @@ public class CountingSort
     @javafx.fxml.FXML
     public void initialize() {
         arrayNumbers = new int[200];
-        util.Utility.fill(arrayNumbers);
+        util.Utility.fill(arrayNumbers,200);
     }
     //Este boton debe ordenar mostrar el arreglo ademas, de mostrar los valores no acomodados
     @javafx.fxml.FXML

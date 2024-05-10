@@ -24,14 +24,12 @@ public class BubbleSort
     @javafx.fxml.FXML
     private TextField txf_iterations;
     private int arrayNumbers[];
-    TableColumn tableColumnsNoSort[] = new TableColumn[200];
-    TableColumn tableColumnsSort[] = new TableColumn[200];
     private Alert alert;
     Elementary elementary = new Elementary();
     @javafx.fxml.FXML
     public void initialize() {
         arrayNumbers = new int[200];
-        util.Utility.fill(arrayNumbers);
+        util.Utility.fill(arrayNumbers,200);
     }
     //Este boton debe ordenar mostrar el arreglo ademas, de mostrar los valores no acomodados
     @javafx.fxml.FXML

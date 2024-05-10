@@ -19,7 +19,7 @@ public class Elementary {
         return iteracionesTotales;
     }
     public void bubbleSort(int a[]){
-        iteracionesTotales = 0;
+        this.iteracionesTotales = 0;
         for(int i=1;i<a.length;i++)
             for(int j=0;j<a.length-i;j++){
                 if(a[j]>a[j+1]){
@@ -32,6 +32,7 @@ public class Elementary {
     }
     
     public void improvedBubbleSort(int a[]){
+        this.iteracionesTotales = 0;
 	    boolean swapped = true; //intercambiado
 	    for(int i=1;swapped;i++){
             swapped = false;
@@ -42,6 +43,7 @@ public class Elementary {
                     a[j+1]=aux;
                     swapped = true;
                 }//if
+                this.iteracionesTotales++;
             }//for j
 	    }//for i
     }

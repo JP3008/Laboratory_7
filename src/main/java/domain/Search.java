@@ -10,10 +10,10 @@ package domain;
  * @author Profesor Lic. Gilberth Chaves A.
  */
 public class Search {
-    
+
+
+
     public int linearSearch(int a[], int element){
-	if(element>a[a.length-1])
-		return -1;
         for(int i=0;i<a.length;i++){
            if(a[i]==element)
                 return i;

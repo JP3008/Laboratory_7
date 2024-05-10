@@ -40,12 +40,12 @@
                      </font>
                   </Label>
                   <TextField fx:id="txf_iterations" layoutX="505.0" layoutY="64.0" prefHeight="44.0" prefWidth="101.0" />
-                  <Button fx:id="bt_start" layoutX="307.0" layoutY="328.0" mnemonicParsing="false" onAction="#startOnAction" text="Start">
+                  <Button fx:id="bt_start" layoutX="306.0" layoutY="299.0" mnemonicParsing="false" onAction="#startOnAction" text="Start">
                      <font>
                         <Font name="Century Gothic Bold" size="30.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bt_randomize" layoutX="505.0" layoutY="328.0" mnemonicParsing="false" onAction="#randomizeOnAction" text="Randomize">
+                  <Button fx:id="bt_randomize" layoutX="505.0" layoutY="299.0" mnemonicParsing="false" onAction="#randomizeOnAction" text="Randomize">
                      <font>
                         <Font name="Century Gothic Bold" size="30.0" />
                      </font>
