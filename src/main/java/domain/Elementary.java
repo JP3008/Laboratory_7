@@ -11,6 +11,10 @@ package domain;
  */
 public class Elementary {
     private int iteracionesTotales = 0;
+    private int counterRepeatNumber[];
+    public int[] getCounterRepeatNumber(){
+        return this.counterRepeatNumber;
+    }
     public int getTotalIteraciones(){
         return iteracionesTotales;
     }
@@ -65,6 +69,7 @@ public class Elementary {
         for (int element : a) {
             counter[element]++; //incrementa el num de ocurrencias del elemento
         }
+        this.counterRepeatNumber = counter;
         // sort array
         int index = 0;
         for (int i = 0; i < counter.length; i++) {

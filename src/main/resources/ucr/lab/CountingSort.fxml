@@ -39,12 +39,12 @@
                         <Font name="Century Gothic" size="30.0" />
                      </font>
                   </Label>
-                  <Button fx:id="bt_start" layoutX="312.0" layoutY="395.0" mnemonicParsing="false" text="Start">
+                  <Button fx:id="bt_start" layoutX="312.0" layoutY="395.0" mnemonicParsing="false" onAction="#startOnAction" text="Start">
                      <font>
                         <Font name="Century Gothic Bold" size="30.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bt_randomize" layoutX="506.0" layoutY="395.0" mnemonicParsing="false" text="Randomize">
+                  <Button fx:id="bt_randomize" layoutX="506.0" layoutY="395.0" mnemonicParsing="false" onAction="#randomizeOnAction" text="Randomize">
                      <font>
                         <Font name="Century Gothic Bold" size="30.0" />
                      </font>
