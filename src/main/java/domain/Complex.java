@@ -29,6 +29,9 @@ public class Complex {
     public int getRecursiveCalling(){
         return this.recursiveCalling;
     }
+    public void setRecursiveCalling(){
+        this.recursiveCalling = 0;
+    }
     public void quickSort(int arr[], int low, int high){
         int i=low;
         this.listLow = i + " ";

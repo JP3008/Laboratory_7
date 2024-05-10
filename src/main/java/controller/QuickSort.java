@@ -58,6 +58,7 @@ public class QuickSort
         txf_Low.setText("");
         txf_high.setText("");
         txf_RecursiveCalls.setText("");
+        complex.setRecursiveCalling();
         initialize();
     }
     private ObservableList<List<String>> getData(int[] arrayNum) {
