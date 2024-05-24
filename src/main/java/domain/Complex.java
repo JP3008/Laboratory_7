@@ -52,6 +52,19 @@ public class Complex {
     public String getAcumulaGapSub3() {
         return acumulaGapSub3;
     }
+    private String listLowMerge = "";
+    private String listHighMerge = "";
+    private int recursiveCallingMerge = 0;
+
+    public String getListHighMerge(){
+        return this.listLowMerge;
+    }
+    public String getListLowMerge(){
+        return this.listHighMerge;
+    }
+    public int getRecursiveCallingMerge(){
+        return this.recursiveCallingMerge;
+    }
     public void quickSort(int arr[], int low, int high){
         int i=low;
         this.listLow = i + " ";
@@ -127,35 +140,48 @@ public class Complex {
 
         counterRadix=count;
     }
-    
+
     public void mergeSort(int a[], int tmp[], int low, int high){
+
         if(low<high){
+            recursiveCallingMerge++;
             int center = (low+high)/2;
             mergeSort(a,tmp,low,center );
             mergeSort(a,tmp,center+1,high);
             merge(a,tmp,low,center+1,high);
         }//if
+
+
+
     }
-        
-    private void merge(int a[], int tmp[], int lowIndex, int highIndex, int endIndex){ 
-	int leftEnd = highIndex - 1; 
-	int tmpPos = lowIndex; 
-	int numElements = endIndex - lowIndex + 1; 
-	while( lowIndex <= leftEnd && highIndex <= endIndex ) 
+
+    private void merge(int a[], int tmp[], int lowIndex, int highIndex, int endIndex){
+        int leftEnd = highIndex - 1;
+        int tmpPos = lowIndex;
+        int numElements = endIndex - lowIndex + 1;
+        while( lowIndex <= leftEnd && highIndex <= endIndex )
             if(a[lowIndex]<=a[highIndex]) {
+                listLowMerge=listLowMerge + tmpPos + " ";
                 tmp[tmpPos++] = a[lowIndex++];
+
+
             }
             else{
+
                 tmp[tmpPos++] = a[highIndex++];
+
             }
-	while(lowIndex<= leftEnd) {
-        tmp[tmpPos++] = a[lowIndex++];
-    }
-	while( highIndex <= endIndex ) {
-        tmp[tmpPos++] = a[highIndex++];
-    }
-	for( int i=0;i<numElements;i++,endIndex--) 
-            a[endIndex] = tmp[endIndex]; 
+        while(lowIndex<= leftEnd) {
+            tmp[tmpPos++] = a[lowIndex++];
+
+        }
+        while( highIndex <= endIndex ) {
+            tmp[tmpPos++] = a[highIndex++];
+            listHighMerge=listHighMerge + leftEnd + " ";
+        }
+        for( int i=0;i<numElements;i++,endIndex--)
+            a[endIndex] = tmp[endIndex];
+
     }
 
     public  void shellSort(int a[]) {
